@@ -1,0 +1,36 @@
+.reload-prompt {
+	&__container {
+		position: absolute;
+		padding: 0;
+		margin: 0;
+		width: 0;
+		height: 0;
+	}
+
+	&__toast {
+		position: fixed;
+		right: 0;
+		bottom: 0;
+		margin: 16px;
+		padding: 12px;
+		border: 1px solid #8885;
+		border-radius: 4px;
+		z-index: 1;
+		text-align: left;
+		box-shadow: 2px 2px 5px 0 var(--theme-background-inverse);
+		background-color: var(--theme-background-main);
+
+		&-message {
+			margin-bottom: 8px;
+		}
+
+		&-button {
+			border: 1px solid #8885;
+			outline: none;
+			margin-right: 5px;
+			border-radius: 2px;
+			padding: 3px 10px;
+			color: var(--theme-text-primary);
+		}
+	}
+}

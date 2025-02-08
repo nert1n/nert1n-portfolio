@@ -1,0 +1,94 @@
+{
+	"name": "template",
+	"private": true,
+	"version": "0.1.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc -b && vite build",
+		"preview": "vite preview",
+		"lint": "pnpm lint:ts && pnpm lint:css",
+		"lint:fix": "pnpm lint:ts:fix && pnpm lint:css:fix",
+		"lint:ts": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+		"lint:ts:fix": "eslint . --ext ts,tsx --fix --report-unused-disable-directives --max-warnings 0",
+		"lint:css": "stylelint \"src/**/*.scss\"",
+		"lint:css:fix": "stylelint \"src/**/*.scss\" --fix --max-warnings 0",
+		"test:e2e": "playwright test --ui",
+		"test:e2e:headed": "playwright test --headed",
+		"test:e2e:debug": "playwright test --debug",
+		"format": "prettier --config .prettierrc.yaml --write .",
+		"prepare": "husky && husky install",
+		"predeploy": "pnpm version patch"
+	},
+	"dependencies": {
+		"axios": "^1.7.9",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"react-hook-form": "^7.54.2",
+		"react-router": "^6.29.0",
+		"react-router-dom": "^6.29.0",
+		"workbox-window": "^7.3.0"
+	},
+	"devDependencies": {
+		"@playwright/test": "^1.50.1",
+		"@types/node": "^20.17.16",
+		"@types/react": "^18.3.18",
+		"@types/react-dom": "^18.3.5",
+		"@types/react-helmet": "^6.1.11",
+		"@typescript-eslint/eslint-plugin": "^7.18.0",
+		"@typescript-eslint/parser": "^7.18.0",
+		"@vitejs/plugin-legacy": "^5.4.3",
+		"@vitejs/plugin-react": "^4.3.4",
+		"eslint": "8.57.0",
+		"eslint-config-airbnb-base": "^15.0.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-import-resolver-alias": "^1.1.2",
+		"eslint-import-resolver-typescript": "^3.7.0",
+		"eslint-plugin-import": "^2.31.0",
+		"eslint-plugin-jsx-a11y": "^6.10.2",
+		"eslint-plugin-optimize-regex": "^1.2.1",
+		"eslint-plugin-prettier": "^5.2.3",
+		"eslint-plugin-promise": "^7.2.1",
+		"eslint-plugin-react": "^7.37.4",
+		"eslint-plugin-react-hooks": "^4.6.2",
+		"eslint-plugin-react-refresh": "^0.4.18",
+		"eslint-plugin-security": "^3.0.1",
+		"eslint-plugin-sonarjs": "^2.0.4",
+		"eslint-plugin-sort-destructure-keys": "^2.0.0",
+		"eslint-plugin-unicorn": "^55.0.0",
+		"husky": "^9.1.7",
+		"lint-staged": "^15.4.3",
+		"pnpm": "^9.15.4",
+		"prettier": "^3.4.2",
+		"sass": "1.78.0",
+		"stylelint": "^16.14.1",
+		"stylelint-config-standard": "^36.0.1",
+		"stylelint-config-standard-scss": "^13.1.0",
+		"stylelint-declaration-block-no-ignored-properties": "^2.8.0",
+		"stylelint-scss": "^6.11.0",
+		"typescript": "5.5.4",
+		"vite": "^5.4.14",
+		"vite-plugin-compression": "^0.5.1",
+		"vite-plugin-pwa": "^0.20.5",
+		"vite-plugin-sitemap": "^0.7.1"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.ts": [
+			"eslint --cache --fix",
+			"git add ."
+		],
+		"*.tsx": [
+			"eslint --cache --fix",
+			"git add ."
+		],
+		"*.scss": [
+			"stylelint --fix",
+			"git add ."
+		]
+	}
+}
