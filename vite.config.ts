@@ -9,17 +9,17 @@ import sitemap from "vite-plugin-sitemap";
 export default defineConfig({
 	plugins: [
 		react(),
-		sitemap({ hostname: "https://www.template.com" }),
+		sitemap({ hostname: "https://nert1n-portfolio.vercel.app/" }),
 		compression({ algorithm: "gzip" }),
 		legacy({ targets: ["defaults", "not IE 11"] }),
 		VitePWA({
 			registerType: "autoUpdate",
 			includeAssets: ["favicon.ico", "robots.txt"],
 			manifest: {
-				name: "Template",
-				short_name: "Temp",
-				description: "Template vite react typescript",
-				theme_color: "#ffffff",
+				name: "nert1n portfolio",
+				short_name: "Portfolio",
+				description: "nert1n main portfolio",
+				theme_color: "#080808",
 			},
 			workbox: {
 				runtimeCaching: [
@@ -63,30 +63,6 @@ export default defineConfig({
 			"@features": path.resolve(__dirname, "./src/features"),
 			"@entities": path.resolve(__dirname, "./src/entities"),
 			"@shared": path.resolve(__dirname, "./src/shared"),
-		},
-	},
-	server: {
-		port: 3000,
-		proxy: {
-			"/api": {
-				target: "https://api.template.com",
-				changeOrigin: true,
-				secure: true,
-				cookieDomainRewrite: "localhost",
-				rewrite: path => path.replace(/^\/api/, ""),
-			},
-			"/ws": {
-				target: "wss://api.template.com",
-				ws: true,
-				rewrite: path => path.replace(/^\/ws/, "/chat"),
-				changeOrigin: true,
-				rewriteWsOrigin: true,
-				secure: true,
-			},
-		},
-		hmr: { overlay: true },
-		fs: {
-			allow: [".."],
 		},
 	},
 	optimizeDeps: { include: ["react", "react-dom", "workbox-window"] },

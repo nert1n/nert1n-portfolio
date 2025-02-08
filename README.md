@@ -1,19 +1,19 @@
 <p align="center">
-  <img alt="<PROJECT NAME> logo" width="300px" src="./public/favicon.ico">
+  <img alt="Portfolio logo" width="300px" src="./public/favicon.ico">
 </p>
 
-<h1 align="center">Template - Frontend Web Application</h1>
+<h1 align="center">Portfolio - Frontend Web Application</h1>
 
 <p align="center">
-  Template is a feature-rich frontend application built using modern technologies like React, TypeScript, and Vite. It offers a fast and scalable platform for developers to collaborate and share coding knowledge.
-</p>
-
-<p align="center">
-  <strong>Live demo:</strong> <a target="_blank" href="https://">Visit Template</a>
+  Portfolio is a feature-rich frontend application built using modern technologies like React, TypeScript, and Vite. It offers a fast and scalable platform for developers to collaborate and share coding knowledge.
 </p>
 
 <p align="center">
-  <strong>Design files:</strong> <a target="_blank" href="https://www.figma.com/">Figma</a>
+  <strong>Live demo:</strong> <a target="_blank" href="https://nert1n-portfolio.vercel.app/">Visit Template</a>
+</p>
+
+<p align="center">
+  <strong>Design files:</strong> <a target="_blank" href="https://www.figma.com/design/AxvhvX8dU1B66735MXV42D/%22nert1n-portfolio%22---web-disign?node-id=0-1&t=HH7o3kJlhb8x9VEi-1">Figma</a>
 </p>
 
 ## Table of Contents
@@ -59,8 +59,8 @@
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/
-cd Template
+git clone https://github.com/nert1n/nert1n-portfolio
+cd nert1n-portfolio
 pnpm install
 ```
 
