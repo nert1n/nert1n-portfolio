@@ -1,4 +1,4 @@
-import { Navbar } from "@widgets/navbar/navbar.tsx";
+import { Navbar } from "@features/navbar/navbar.tsx";
 
 export const Header = () => {
 	return (

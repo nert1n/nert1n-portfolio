@@ -13,6 +13,7 @@ const config: Config = {
 	theme: {
 		extend: {
 			colors: {
+				"bg-transparent": "rgba(0,0,0,0.25)",
 				"blue-400": "#2176B4",
 			},
 		},

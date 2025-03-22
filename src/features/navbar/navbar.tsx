@@ -10,9 +10,18 @@ export const Navbar = () => {
 	return (
 		<div>
 			<ButtonBurger onClick={handleChangeOpenNavbar} />
+			<button
+				className={clsx(
+					"fixed z-10 left-0 top-0 w-screen h-screen transition-all bg-bg-transparent opacity-0 pointer-events-none",
+					isNavbarOpen
+						? "opacity-100 pointer-events-auto"
+						: "opacity-0 pointer-events-none"
+				)}
+				onClick={handleChangeOpenNavbar}
+			/>
 			<div
 				className={clsx(
-					"fixed sm:max-w-[60vw] w-max bg-black top-0 right-0 h-screen transition-transform duration-300",
+					"fixed z-20 sm:max-w-[60vw] w-max bg-black top-0 right-0 h-screen transition-transform duration-300",
 					isNavbarOpen ? "translate-x-0" : "translate-x-full"
 				)}>
 				<ButtonBurger
