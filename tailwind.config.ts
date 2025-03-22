@@ -11,7 +11,11 @@ const config: Config = {
 		"./src/shared/**/*.{js,ts,jsx,tsx,mdx}",
 	],
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				"blue-400": "#2176B4",
+			},
+		},
 	},
 	plugins: [],
 };
