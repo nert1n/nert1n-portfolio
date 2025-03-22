@@ -1,6 +1,7 @@
 import { clsx } from "clsx";
 import { useState } from "react";
 
+import { NavData } from "@shared/data/nav.data.ts";
 import { ButtonBurger } from "@shared/ui/button/button-burger/button-burger.tsx";
 
 export const Navbar = () => {
@@ -28,6 +29,13 @@ export const Navbar = () => {
 					className="mx-[50px] my-8"
 					onClick={handleChangeOpenNavbar}
 				/>
+				<div className="flex flex-col gap-2">
+					{NavData.map((item, id) => (
+						<a key={item.label + id} href={item.link}>
+							{item.label}
+						</a>
+					))}
+				</div>
 			</div>
 		</div>
 	);

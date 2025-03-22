@@ -4,4 +4,4 @@ export interface IProject {
 	image_url: string;
 }
 
-export const ProjectsTypes: IProject[] = [];
+export const ProjectsData: IProject[] = [];
