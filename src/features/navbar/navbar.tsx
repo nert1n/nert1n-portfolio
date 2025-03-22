@@ -22,16 +22,19 @@ export const Navbar = () => {
 			/>
 			<div
 				className={clsx(
-					"fixed z-20 sm:max-w-[60vw] w-max bg-black top-0 right-0 h-screen transition-transform duration-300",
+					"fixed z-20 flex flex-col items-end sm:max-w-[60vw] w-max bg-black top-0 right-0 h-screen transition-transform duration-300",
 					isNavbarOpen ? "translate-x-0" : "translate-x-full"
 				)}>
 				<ButtonBurger
 					className="mx-[50px] my-8"
 					onClick={handleChangeOpenNavbar}
 				/>
-				<div className="flex flex-col gap-2">
+				<div className="flex flex-col gap-2 pr-2 pl-4">
 					{NavData.map((item, id) => (
-						<a key={item.label + id} href={item.link}>
+						<a
+							key={item.label + id}
+							href={item.link}
+							onClick={handleChangeOpenNavbar}>
 							{item.label}
 						</a>
 					))}
